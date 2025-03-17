@@ -14,19 +14,19 @@ typedef struct Treno_s{
 }Treno;
 
 Treno* LetturaFileLista(Treno *first);
-//void StampaLista(Treno *first);
+void StampaLista(Treno *first);
 int NewStazione(Treno* p, int Stazioni);
 
 
 int main(){
 	
-	int Stazioni=0; //Deve arrivare a 27 è un contatore
+	int Stazioni=0; //Deve arrivare a 27 Ã¨ un contatore
 	int Tempo=0; // Deve arrivare a 3600 secondi
 	int Ora=3600;
 	Treno *first = NULL; //puntatore al primo nodo
 	Treno *p = first;
 	first = LetturaFileLista(first);
-//	StampaLista(first);
+	StampaLista(first);
 	
 	while(Tempo!=Ora || Stazioni==27){
 		Tempo = NewStazione(p,Stazioni);
@@ -47,12 +47,12 @@ Treno* LetturaFileLista(Treno * first){
 	printf("\n\n Inserire il numero di passeggieri totale: \n ");
 	scanf("%d",&NumeroPasseggieri);
 	
-	// p è il file di lettura (altri nomi non li prendeva non so perché)
+	// p Ã¨ il file di lettura
 	if((finput=fopen("p.txt","r"))==NULL){
 		printf("\n\n Errore \n\n");
 	}
 	else{
-		printf("\n\n si è aperto \n\n");
+		printf("\n\n si Ã¨ aperto \n\n");
 
 		while(i!=NumeroPasseggieri){
 			Treno* current = (Treno*)malloc(sizeof(Treno));
@@ -73,7 +73,7 @@ Treno* LetturaFileLista(Treno * first){
     
 }
 
-/*void StampaLista(Treno *first) {
+void StampaLista(Treno *first) {
 		while(i!=NumeroPasseggieri){
 			printf("\n\n Nodo nuovo! ");
 	        printf("\n Stazione di Salita: %d", current->StaSal);
@@ -82,7 +82,7 @@ Treno* LetturaFileLista(Treno * first){
         	current = current->next;
         	i++;
 		}
-}*/
+}
 
 int NewStazione(Treno* p, int Stazioni){
 
