@@ -1,0 +1,65 @@
+ANALISI
+
+27 stazioni da 0 a 26
+per un ora
+il tempo è 2 minuti per ogni stazione
+il treno rimane fermo per il numero di passeggeri che salgono, una persona=1s
+
+! Inserimeno da File !
+stazione di salita,     istante di arrivo nella stazione,    stazione di discesa3
+3 0 6
+5 13 12
+1 99 3
+4 1 6
+1 32 2
+6 19 3
+...
+Corsa fra le 12 e le 13
+
+STAMPARE IL:
+Istante di arrivo
+Istante di partenza
+Numero di passeggieri durante lo spostamento
+In assenza di passeggieri il treno parte dall'istante 0 alla stazione 0
+
+/////////////////////////////COME FARE///////////////////////////////////
+
+- Preparare il file ed indicare nel codice la struttura passeggieri.txt
+
+- Dichiariamo una struct
+
+- struct Treno{
+	int StaSal; //Stazione di salita
+	int StaDis; //Stazione di discesa
+	
+	int CurrPass; //Passeggeri correnti
+
+	int IstArr; //Istante di arrivo
+	int IstPart; //Istante di partenza
+
+	struct Treno next; // Puntatore al nodo successivo
+}
+
+- int Stazioni=0; //Deve arrivare a 27 è un contatore
+- int Tempo=0; // Deve arrivare a 3600 secondi
+- Treno *first = NULL; //puntatore al primo nodo
+
+- fai una funzione per l'inserimento da file con le liste intanto creo un nuovo nodo e la lista stessa SENZA IL MENU'
+
+- fai una funzione per stampare la lista acquisita solo per debug
+
+- fai una funzione da richiamare ogni volta che la stazione cambia che sta dentro a un while dove
+una variabile puntatore p indica il nodo dove siamo correntemente e poi alla fine torna al first.
+Questa funzione dovrà:
+	-stampare la stazione in cui siamo	
+	-stampare il numero di passeggieri
+	-stampare l'istante di arrivo e partenza
+! deve contenere un if: se Stazioni=27 Stazioni torna a 0;
+
+
+
+
+
+
+
+
