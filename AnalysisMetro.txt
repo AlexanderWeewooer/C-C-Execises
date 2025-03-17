@@ -1,3 +1,5 @@
+/*This analysis is in Italian since I did it while in school*/
+
 ANALISI
 
 27 stazioni da 0 a 26
@@ -55,11 +57,6 @@ Questa funzione dovrà:
 	-stampare il numero di passeggieri
 	-stampare l'istante di arrivo e partenza
 ! deve contenere un if: se Stazioni=27 Stazioni torna a 0;
-
-
-
-
-
 
 
 
