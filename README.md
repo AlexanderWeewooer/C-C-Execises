@@ -24,3 +24,12 @@ Using linked lists create an application to manage a storage unit that manages p
 The program needs to load the data form keyboard and display it. For every product you need to know the name, 
 the price and how many items you have in stock.
 Make a function that given the input displays all the data that satisfy that input condition.
+
+## House sales 🏠
+Define a struct "house" to memorize data of the houses overviewed by an agency. Every house has a specific number of square meters, an energy class (from A to F) and the price.
+Create a function to:
+- initialize the list.
+- find the house with the least energy used for square meter.
+- display the house with the best energy class.
+- search based on square meters.
+- search based on energy class.
